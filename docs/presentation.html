@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MindWell AI - Presentation</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.6.1/dist/reveal.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.6.1/dist/theme/white.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.6.1/plugin/highlight/monokai.css">
+    <style>
+        :root {
+            --r-heading-color: #2c3e50;
+            --r-main-color: #34495e;
+            --r-link-color: #3498db;
+        }
+        .reveal h1, .reveal h2, .reveal h3 { color: var(--r-heading-color); }
+        .reveal { font-size: 32px; }
+        .reveal h1 { font-size: 2.2em; }
+        .reveal h2 { font-size: 1.6em; }
+        .reveal h3 { font-size: 1.3em; }
+        .reveal ul { text-align: left; }
+        .reveal .highlight { color: #e74c3c; font-weight: bold; }
+        .reveal .success { color: #27ae60; }
+        .reveal .warning { color: #f39c12; }
+        .reveal .info { color: #3498db; }
+        .architecture-box {
+            background: #f8f9fa;
+            border: 2px solid #dee2e6;
+            border-radius: 10px;
+            padding: 20px;
+            font-family: monospace;
+            font-size: 0.7em;
+            text-align: left;
+            white-space: pre;
+        }
+        .risk-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.8em;
+        }
+        .risk-table th, .risk-table td {
+            border: 1px solid #dee2e6;
+            padding: 12px;
+            text-align: left;
+        }
+        .risk-table th {
+            background: #3498db;
+            color: white;
+        }
+        .risk-critical { background: #fee2e2; color: #dc2626; font-weight: bold; }
+        .risk-high { background: #fef3c7; color: #d97706; }
+        .risk-moderate { background: #fef9c3; color: #ca8a04; }
+        .risk-low { background: #dcfce7; color: #16a34a; }
+        .two-column {
+            display: flex;
+            gap: 40px;
+        }
+        .two-column > div {
+            flex: 1;
+        }
+        .alert-box {
+            background: #fee2e2;
+            border-left: 5px solid #dc2626;
+            padding: 15px;
+            text-align: left;
+            font-size: 0.75em;
+            border-radius: 5px;
+        }
+        .workflow-box {
+            background: #eff6ff;
+            border-radius: 10px;
+            padding: 15px;
+            font-size: 0.7em;
+        }
+        .stat-box {
+            display: inline-block;
+            background: #3498db;
+            color: white;
+            padding: 20px 30px;
+            border-radius: 10px;
+            margin: 10px;
+            text-align: center;
+        }
+        .stat-box .number {
+            font-size: 2em;
+            font-weight: bold;
+        }
+        .checkmark { color: #27ae60; }
+        .footer-note {
+            font-size: 0.5em;
+            color: #6c757d;
+            position: absolute;
+            bottom: 20px;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="reveal">
+        <div class="slides">
+            
+            <!-- Title Slide -->
+            <section>
+                <h1>🧠 MindWell AI</h1>
+                <h3>AI-Powered Mental Health Support Platform</h3>
+                <p style="margin-top: 50px;">
+                    <em>Bridging the gap between therapy sessions with<br>
+                    intelligent, compassionate AI support</em>
+                </p>
+                <p style="margin-top: 50px; font-size: 0.7em; color: #6c757d;">
+                    January 2026
+                </p>
+            </section>
+
+            <!-- Problem Slide -->
+            <section>
+                <h2>The Problem</h2>
+                <div class="two-column">
+                    <div>
+                        <div class="stat-box">
+                            <div class="number">1 in 5</div>
+                            <div>adults experience<br>mental illness annually</div>
+                        </div>
+                        <div class="stat-box">
+                            <div class="number">25+</div>
+                            <div>days average wait<br>for therapy</div>
+                        </div>
+                    </div>
+                    <div style="text-align: left;">
+                        <h3>Key Challenges:</h3>
+                        <ul>
+                            <li>❌ Limited support between sessions</li>
+                            <li>❌ High cost of professional care</li>
+                            <li>❌ Stigma prevents seeking help</li>
+                            <li>❌ Crisis moments don't wait</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Solution Slide -->
+            <section>
+                <h2>Our Solution</h2>
+                <h3 style="color: #3498db;">MindWell AI</h3>
+                <p style="font-size: 1.1em; margin: 30px 0;">
+                    An AI companion providing <span class="highlight">24/7 supportive conversations</span><br>
+                    while enabling <span class="success">healthcare professionals to collaborate</span><br>
+                    and monitor patient wellbeing.
+                </p>
+                <div style="display: flex; justify-content: center; gap: 30px; margin-top: 40px;">
+                    <div class="stat-box" style="background: #27ae60;">
+                        <div>🤖</div>
+                        <div>AI Support</div>
+                    </div>
+                    <div class="stat-box" style="background: #9b59b6;">
+                        <div>📊</div>
+                        <div>Analytics</div>
+                    </div>
+                    <div class="stat-box" style="background: #e74c3c;">
+                        <div>🚨</div>
+                        <div>Safety Net</div>
+                    </div>
+                    <div class="stat-box" style="background: #f39c12;">
+                        <div>👨‍⚕️</div>
+                        <div>Clinician Tools</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Architecture Slide -->
+            <section>
+                <h2>System Architecture</h2>
+                <div class="architecture-box">
+┌─────────────────┐     ┌─────────────────┐     ┌─────────────────┐
+│   Patient App   │────▶│   FastAPI       │────▶│   PostgreSQL    │
+│   (Web/Mobile)  │     │   Backend       │     │   Database      │
+└─────────────────┘     └────────┬────────┘     └─────────────────┘
+                                 │
+                        ┌────────▼────────┐
+                        │   AI Services   │
+                        │  • LLM Chat     │
+                        │  • Sentiment    │
+                        │  • Risk Detect  │
+                        └────────┬────────┘
+                                 │
+                        ┌────────▼────────┐
+                        │  OpenAI GPT-4   │
+                        └─────────────────┘
+                </div>
+                <div style="display: flex; justify-content: center; gap: 20px; margin-top: 20px; font-size: 0.7em;">
+                    <span>✅ Async Python</span>
+                    <span>✅ Modular Design</span>
+                    <span>✅ HIPAA-Aware</span>
+                    <span>✅ Scalable</span>
+                </div>
+            </section>
+
+            <!-- AI Capability 1: Conversation -->
+            <section>
+                <h2>AI Capability: Empathetic Conversations</h2>
+                <div class="two-column">
+                    <div style="text-align: left;">
+                        <h3>Features:</h3>
+                        <ul>
+                            <li>Custom mental health system prompt</li>
+                            <li>Context-aware responses</li>
+                            <li>Conversation history tracking</li>
+                            <li>Non-judgmental, validating tone</li>
+                        </ul>
+                        <h3 style="margin-top: 20px;">Guidelines Built-In:</h3>
+                        <ul>
+                            <li>Never diagnose or prescribe</li>
+                            <li>Encourage professional help</li>
+                            <li>Maintain appropriate boundaries</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <div style="background: #f0f0f0; padding: 15px; border-radius: 10px; text-align: left; font-size: 0.7em;">
+                            <p><strong>User:</strong> "I've been feeling really anxious about work lately..."</p>
+                            <p style="color: #3498db;"><strong>MindWell:</strong> "I hear you - work anxiety can feel overwhelming. It's completely valid to feel this way. Would you like to talk about what specifically has been triggering these feelings?"</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- AI Capability 2: Sentiment -->
+            <section>
+                <h2>AI Capability: Sentiment Analysis</h2>
+                <div class="two-column">
+                    <div style="text-align: left;">
+                        <h3>Emotions Detected:</h3>
+                        <ul>
+                            <li>😊 Joy</li>
+                            <li>😢 Sadness</li>
+                            <li>😠 Anger</li>
+                            <li>😰 Fear/Anxiety</li>
+                            <li>🤝 Trust</li>
+                            <li>✨ Anticipation</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <div style="background: #1e1e1e; color: #dcdcdc; padding: 20px; border-radius: 10px; text-align: left; font-size: 0.65em; font-family: monospace;">
+<span style="color: #9cdcfe;">{</span>
+  <span style="color: #ce9178;">"sentiment"</span>: <span style="color: #ce9178;">"negative"</span>,
+  <span style="color: #ce9178;">"confidence"</span>: <span style="color: #b5cea8;">0.85</span>,
+  <span style="color: #ce9178;">"dominant_emotion"</span>: <span style="color: #ce9178;">"fear"</span>,
+  <span style="color: #ce9178;">"emotions"</span>: [
+    {<span style="color: #ce9178;">"emotion"</span>: <span style="color: #ce9178;">"fear"</span>, <span style="color: #ce9178;">"confidence"</span>: <span style="color: #b5cea8;">0.8</span>},
+    {<span style="color: #ce9178;">"emotion"</span>: <span style="color: #ce9178;">"sadness"</span>, <span style="color: #ce9178;">"confidence"</span>: <span style="color: #b5cea8;">0.4</span>}
+  ]
+<span style="color: #9cdcfe;">}</span>
+                        </div>
+                        <p style="font-size: 0.7em; margin-top: 15px;">Real-time analysis on every message</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- AI Capability 3: Risk Detection -->
+            <section>
+                <h2>AI Capability: Crisis Detection</h2>
+                <table class="risk-table">
+                    <tr>
+                        <th>Risk Level</th>
+                        <th>Indicators</th>
+                        <th>Response</th>
+                    </tr>
+                    <tr class="risk-low">
+                        <td>🟢 LOW</td>
+                        <td>Normal conversation</td>
+                        <td>Continue supportive dialogue</td>
+                    </tr>
+                    <tr class="risk-moderate">
+                        <td>🟡 MODERATE</td>
+                        <td>Struggling, overwhelmed</td>
+                        <td>Gentle resource suggestions</td>
+                    </tr>
+                    <tr class="risk-high">
+                        <td>🟠 HIGH</td>
+                        <td>Hopelessness, worthlessness</td>
+                        <td>Prominent crisis resources + Alert</td>
+                    </tr>
+                    <tr class="risk-critical">
+                        <td>🔴 CRITICAL</td>
+                        <td>Suicidal ideation, self-harm</td>
+                        <td>Immediate intervention + Clinician alert</td>
+                    </tr>
+                </table>
+                <p style="margin-top: 20px; font-size: 0.8em;">
+                    <strong>Crisis Resources Automatically Displayed:</strong> 988 Lifeline • Crisis Text Line • 911
+                </p>
+            </section>
+
+            <!-- Healthcare Collaboration Overview -->
+            <section>
+                <h2>Healthcare Collaboration</h2>
+                <h3 style="color: #9b59b6;">Designed WITH and FOR Clinicians</h3>
+                <div class="workflow-box" style="margin: 30px 0;">
+                    <p style="font-size: 1.1em; margin: 0;">
+                        <strong>Patient Chat</strong> → <strong>AI Analysis</strong> → <strong>Risk Flag</strong> → <strong>Clinician Alert</strong> → <strong>Intervention</strong>
+                    </p>
+                    <p style="font-size: 0.9em; color: #6c757d; margin: 10px 0 0 0;">
+                        24/7 Support → Sentiment Tracking → Auto Detection → Real-time Notification → Professional Follow-up
+                    </p>
+                </div>
+                <div style="display: flex; justify-content: center; gap: 20px;">
+                    <div class="stat-box" style="background: #9b59b6;">
+                        <div>📊</div>
+                        <div>Analytics</div>
+                    </div>
+                    <div class="stat-box" style="background: #e74c3c;">
+                        <div>🚨</div>
+                        <div>Alerts</div>
+                    </div>
+                    <div class="stat-box" style="background: #3498db;">
+                        <div>📝</div>
+                        <div>Notes</div>
+                    </div>
+                    <div class="stat-box" style="background: #27ae60;">
+                        <div>📈</div>
+                        <div>Trends</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Alert System -->
+            <section>
+                <h2>Real-Time Alert System</h2>
+                <div class="alert-box" style="max-width: 500px; margin: 20px auto;">
+                    <p style="margin: 0; color: #dc2626; font-weight: bold; font-size: 1.1em;">🚨 CRITICAL ALERT</p>
+                    <hr style="border-color: #fca5a5;">
+                    <p><strong>Patient:</strong> [Name] &nbsp;|&nbsp; <strong>Session:</strong> #45</p>
+                    <p><strong>Risk:</strong> Suicidal ideation detected</p>
+                    <p><strong>Time:</strong> 2 minutes ago</p>
+                    <p style="margin-bottom: 0;"><strong>Action Required:</strong> Immediate review</p>
+                    <div style="margin-top: 15px;">
+                        <button style="background: #dc2626; color: white; border: none; padding: 8px 16px; border-radius: 5px; margin-right: 10px;">Acknowledge</button>
+                        <button style="background: #3498db; color: white; border: none; padding: 8px 16px; border-radius: 5px;">Contact Patient</button>
+                    </div>
+                </div>
+                <p style="font-size: 0.8em;">
+                    ✅ Real-time notifications &nbsp;|&nbsp; ✅ Risk categorization &nbsp;|&nbsp; ✅ Acknowledgment tracking
+                </p>
+            </section>
+
+            <!-- Clinician Dashboard -->
+            <section>
+                <h2>Clinician Dashboard Features</h2>
+                <div class="two-column">
+                    <div style="text-align: left;">
+                        <h3>📊 Patient Analytics</h3>
+                        <ul>
+                            <li>Session summaries</li>
+                            <li>Sentiment trends over time</li>
+                            <li>Engagement metrics</li>
+                            <li>Common topics & concerns</li>
+                        </ul>
+                        <h3>📝 Clinical Notes</h3>
+                        <ul>
+                            <li>Private notes per session</li>
+                            <li>Treatment tracking</li>
+                            <li>Intervention documentation</li>
+                        </ul>
+                    </div>
+                    <div style="text-align: left;">
+                        <h3>Healthcare Input:</h3>
+                        <ul>
+                            <li><span class="checkmark">✓</span> Crisis keywords validated by clinical psychologists</li>
+                            <li><span class="checkmark">✓</span> Response tone reviewed by therapists</li>
+                            <li><span class="checkmark">✓</span> Alert thresholds calibrated with psychiatric input</li>
+                            <li><span class="checkmark">✓</span> Ethical guidelines informed by healthcare ethics</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- What We Built -->
+            <section>
+                <h2>What We've Built ✅</h2>
+                <div class="two-column">
+                    <div style="text-align: left;">
+                        <h3>Working Prototype:</h3>
+                        <ul>
+                            <li><span class="checkmark">✓</span> FastAPI REST API</li>
+                            <li><span class="checkmark">✓</span> Chat endpoint with LLM integration</li>
+                            <li><span class="checkmark">✓</span> Sentiment analysis service</li>
+                            <li><span class="checkmark">✓</span> Risk assessment engine</li>
+                            <li><span class="checkmark">✓</span> Session management</li>
+                            <li><span class="checkmark">✓</span> Clinician collaboration API</li>
+                            <li><span class="checkmark">✓</span> Test suite</li>
+                        </ul>
+                    </div>
+                    <div style="text-align: left;">
+                        <h3>API Endpoints:</h3>
+                        <div style="background: #f8f9fa; padding: 15px; border-radius: 5px; font-family: monospace; font-size: 0.65em;">
+                            <p style="margin: 5px 0;"><span style="color: #27ae60;">POST</span> /api/v1/chat</p>
+                            <p style="margin: 5px 0;"><span style="color: #3498db;">GET</span> /api/v1/sessions</p>
+                            <p style="margin: 5px 0;"><span style="color: #3498db;">GET</span> /api/v1/clinician/alerts</p>
+                            <p style="margin: 5px 0;"><span style="color: #27ae60;">POST</span> /api/v1/clinician/notes</p>
+                            <p style="margin: 5px 0;"><span style="color: #3498db;">GET</span> /api/v1/analytics</p>
+                            <p style="margin: 5px 0;"><span style="color: #3498db;">GET</span> /health</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Roadmap -->
+            <section>
+                <h2>Roadmap</h2>
+                <div style="text-align: left; max-width: 700px; margin: 0 auto;">
+                    <h3 style="color: #27ae60;">✅ Phase 1: MVP (Complete)</h3>
+                    <p style="margin-left: 30px;">Core chat • Sentiment analysis • Risk detection • Clinician API</p>
+                    
+                    <h3 style="color: #3498db;">🔄 Phase 2: Enhancement</h3>
+                    <p style="margin-left: 30px;">Frontend app • Advanced analytics • Mood tracking • Mobile app</p>
+                    
+                    <h3 style="color: #9b59b6;">📋 Phase 3: Scale</h3>
+                    <p style="margin-left: 30px;">EHR integration • Multi-language • Group support • Voice input</p>
+                </div>
+            </section>
+
+            <!-- Summary -->
+            <section>
+                <h2>Key Takeaways</h2>
+                <div style="font-size: 1.1em;">
+                    <p>✅ <strong>Working AI Prototype</strong> — Functional code, not just concepts</p>
+                    <p>✅ <strong>AI Design Skills</strong> — Custom sentiment, risk assessment, LLM integration</p>
+                    <p>✅ <strong>Healthcare Collaboration</strong> — Built for and with clinical professionals</p>
+                    <p>✅ <strong>Safety-First</strong> — Crisis detection is core, not an afterthought</p>
+                </div>
+                <div style="margin-top: 50px;">
+                    <h3>Questions?</h3>
+                    <p style="font-size: 0.8em; color: #6c757d;">Thank you for your attention</p>
+                </div>
+            </section>
+
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.6.1/dist/reveal.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.6.1/plugin/highlight/highlight.js"></script>
+    <script>
+        Reveal.initialize({
+            hash: true,
+            slideNumber: true,
+            progress: true,
+            center: true,
+            transition: 'slide',
+            plugins: [ RevealHighlight ]
+        });
+    </script>
+</body>
+</html>
